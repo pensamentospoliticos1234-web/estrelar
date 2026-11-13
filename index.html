@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fffaf6" />
+    <meta name="description" content="Protótipo visual da ESTRELA, um marketplace brasileiro de serviços. Conteúdo demonstrativo e fictício." />
+    <title>ESTRELA — Encontre o profissional certo</title>
+    <link rel="icon" type="image/svg+xml" href="public/brand/estrela-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="demo-ribbon" role="status">
+      <span class="demo-dot" aria-hidden="true"></span>
+      Protótipo visual · todos os profissionais, avaliações e preços são fictícios
+      <span class="demo-pill">DEMO</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="ESTRELA, início">
+        <img src="public/brand/estrela-mark.svg" alt="" width="40" height="40" />
+        <span>ESTRELA</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#categorias">Explorar serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#profissionais">Para profissionais</a>
+      </nav>
+      <div class="header-actions">
+        <button class="button button-quiet" data-demo-action="Entrar">Entrar</button>
+        <button class="button button-primary button-small" data-demo-action="Criar conta">Começar agora</button>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-star">✦</span> Seu próximo grande encontro começa aqui</span>
+          <h1>Encontre o profissional certo <span>para o que você precisa.</span></h1>
+          <p>Boas soluções começam com as pessoas certas. Descubra talentos e serviços perto de você.</p>
+          <form class="search-box" id="search-form" role="search">
+            <label class="search-field">
+              <span class="field-icon" aria-hidden="true">⌕</span>
+              <span class="field-copy"><span>Qual serviço você procura?</span>
+                <input id="service-query" type="search" placeholder="Ex.: eletricista, aulas de inglês" autocomplete="off" />
+              </span>
+            </label>
+            <span class="search-divider" aria-hidden="true"></span>
+            <label class="search-field location-field">
+              <span class="field-icon pin-icon" aria-hidden="true">⌖</span>
+              <span class="field-copy"><span>Em qual cidade ou região?</span>
+                <input id="location-query" type="text" placeholder="Ex.: São Paulo, SP" autocomplete="off" />
+              </span>
+            </label>
+            <button class="button button-primary search-submit" type="submit"><span aria-hidden="true">⌕</span> Encontrar profissionais</button>
+          </form>
+          <p class="search-note"><span aria-hidden="true">✦</span> Busca demonstrativa: nenhuma solicitação será enviada.</p>
+        </div>
+        <div class="hero-art" aria-label="Ilustração decorativa de profissionais trabalhando">
+          <div class="art-sun"></div>
+          <div class="art-card art-card-top"><span class="art-icon">✦</span><span><b>Talentos que inspiram</b><small>Bem pertinho de você</small></span></div>
+          <div class="art-person person-back"><span class="person-head"></span><span class="person-body"></span></div>
+          <div class="art-person person-front"><span class="person-head"></span><span class="person-body"></span><span class="person-tool">✦</span></div>
+          <div class="art-plant"><i></i><i></i><i></i><b></b></div>
+          <div class="art-card art-card-bottom"><span class="rating-star">★</span><span><b>Feito com capricho</b><small>Do primeiro contato ao final</small></span></div>
+          <div class="art-sparkle sparkle-one">✦</div><div class="art-sparkle sparkle-two">✧</div>
+        </div>
+        <div class="hero-trust"><span class="trust-avatars" aria-hidden="true"><i>✦</i><i>●</i><i>✿</i></span><span>Uma ideia feita para aproximar pessoas e bons serviços.</span></div>
+      </section>
+
+      <section class="category-section section-wrap" id="categorias">
+        <div class="section-heading">
+          <div><span class="eyebrow">ENCONTRE SEU PRÓXIMO TALENTO</span><h2>O que você precisa resolver?</h2></div>
+          <button class="text-link" id="show-all-categories">Ver todas <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="category-grid" id="category-grid">
+          <button class="category-card" data-category="Casa e reparos"><span class="category-icon peach">⌂</span><span>Casa e reparos</span><small>Pequenos e grandes projetos</small></button>
+          <button class="category-card" data-category="Reformas"><span class="category-icon lilac">▤</span><span>Reformas</span><small>Transforme seus espaços</small></button>
+          <button class="category-card" data-category="Aulas"><span class="category-icon yellow">✎</span><span>Aulas e aprendizado</span><small>Conhecimento que aproxima</small></button>
+          <button class="category-card" data-category="Tecnologia"><span class="category-icon blue">⌘</span><span>Tecnologia</span><small>Ideias para o mundo digital</small></button>
+          <button class="category-card" data-category="Beleza"><span class="category-icon pink">✿</span><span>Beleza e bem-estar</span><small>Um cuidado só seu</small></button>
+          <button class="category-card" data-category="Eventos"><span class="category-icon green">♫</span><span>Eventos e celebrações</span><small>Momentos para lembrar</small></button>
+        </div>
+      </section>
+
+      <section class="pros-section" id="profissionais">
+        <div class="section-wrap">
+          <div class="section-heading pro-heading">
+            <div><span class="eyebrow">GENTE QUE FAZ ACONTECER</span><h2>Conheça alguns profissionais</h2><p>Perfis de exemplo para você visualizar como será a experiência.</p></div>
+            <div class="slider-controls"><button class="round-button" id="scroll-left" aria-label="Rolar profissionais para a esquerda">←</button><button class="round-button" id="scroll-right" aria-label="Rolar profissionais para a direita">→</button></div>
+          </div>
+          <div class="results-status" id="results-status" aria-live="polite"></div>
+          <div class="professional-grid" id="professional-grid">
+            <article class="professional-card" data-name="Marina Costa" data-role="Eletricista residencial" data-category="Casa e reparos" data-location="Vila Mariana, São Paulo" data-price="A partir de R$ 120" data-color="coral" data-initials="MC" data-description="Atendimento residencial com foco em instalações, iluminação e pequenos reparos elétricos. Este perfil é ilustrativo e não representa uma pessoa real.">
+              <div class="profile-photo photo-coral"><span>MC</span><span class="photo-sparkle">✦</span></div>
+              <div class="professional-info"><span class="demo-tag">DEMO · perfil fictício</span><div class="profile-title"><h3>Marina Costa</h3><span class="verified-mark" title="Selo ilustrativo">✓</span></div><p class="professional-role">Eletricista residencial</p><p class="professional-location"><span aria-hidden="true">⌖</span> Vila Mariana, São Paulo</p><div class="profile-meta"><span class="rating"><b>★</b> 4,9 <small>(42)</small></span><span class="starting-price">A partir de <b>R$ 120</b></span></div><button class="button button-outline profile-button" data-open-profile>Ver perfil <span aria-hidden="true">→</span></button></div>
+            </article>
+            <article class="professional-card" data-name="Rafael Lima" data-role="Professor de inglês" data-category="Aulas" data-location="Pinheiros, São Paulo" data-price="A partir de R$ 85" data-color="blue" data-initials="RL" data-description="Aulas individuais de inglês com trilhas personalizadas para conversação e viagens. Este perfil é ilustrativo e não representa uma pessoa real.">
+              <div class="profile-photo photo-blue"><span>RL</span><span class="photo-sparkle">✦</span></div>
+              <div class="professional-info"><span class="demo-tag">DEMO · perfil fictício</span><div class="profile-title"><h3>Rafael Lima</h3><span class="verified-mark" title="Selo ilustrativo">✓</span></div><p class="professional-role">Professor de inglês</p><p class="professional-location"><span aria-hidden="true">⌖</span> Pinheiros, São Paulo</p><div class="profile-meta"><span class="rating"><b>★</b> 5,0 <small>(28)</small></span><span class="starting-price">A partir de <b>R$ 85</b></span></div><button class="button button-outline profile-button" data-open-profile>Ver perfil <span aria-hidden="true">→</span></button></div>
+            </article>
+            <article class="professional-card" data-name="Joana Ribeiro" data-role="Designer de interiores" data-category="Reformas" data-location="Moema, São Paulo" data-price="A partir de R$ 250" data-color="green" data-initials="JR" data-description="Projetos acolhedores para renovar ambientes, com consultoria e planejamento visual. Este perfil é ilustrativo e não representa uma pessoa real.">
+              <div class="profile-photo photo-green"><span>JR</span><span class="photo-sparkle">✦</span></div>
+              <div class="professional-info"><span class="demo-tag">DEMO · perfil fictício</span><div class="profile-title"><h3>Joana Ribeiro</h3><span class="verified-mark" title="Selo ilustrativo">✓</span></div><p class="professional-role">Designer de interiores</p><p class="professional-location"><span aria-hidden="true">⌖</span> Moema, São Paulo</p><div class="profile-meta"><span class="rating"><b>★</b> 4,8 <small>(36)</small></span><span class="starting-price">A partir de <b>R$ 250</b></span></div><button class="button button-outline profile-button" data-open-profile>Ver perfil <span aria-hidden="true">→</span></button></div>
+            </article>
+            <article class="professional-card" data-name="Caio Mendes" data-role="Técnico de informática" data-category="Tecnologia" data-location="Centro, São Paulo" data-price="A partir de R$ 95" data-color="purple" data-initials="CM" data-description="Suporte para computadores, configuração de rede e orientação para uso de tecnologia. Este perfil é ilustrativo e não representa uma pessoa real.">
+              <div class="profile-photo photo-purple"><span>CM</span><span class="photo-sparkle">✦</span></div>
+              <div class="professional-info"><span class="demo-tag">DEMO · perfil fictício</span><div class="profile-title"><h3>Caio Mendes</h3><span class="verified-mark" title="Selo ilustrativo">✓</span></div><p class="professional-role">Técnico de informática</p><p class="professional-location"><span aria-hidden="true">⌖</span> Centro, São Paulo</p><div class="profile-meta"><span class="rating"><b>★</b> 4,9 <small>(19)</small></span><span class="starting-price">A partir de <b>R$ 95</b></span></div><button class="button button-outline profile-button" data-open-profile>Ver perfil <span aria-hidden="true">→</span></button></div>
+            </article>
+          </div>
+          <div class="empty-state" id="empty-state" hidden><span class="empty-star">✦</span><h3>Nenhum perfil de demonstração encontrado</h3><p>Tente outro serviço ou região. Estes dados são apenas exemplos visuais.</p><button class="button button-outline" id="clear-search">Limpar busca</button></div>
+        </div>
+      </section>
+
+      <section class="how-section section-wrap" id="como-funciona">
+        <div class="how-intro"><span class="eyebrow">SIMPLES ASSIM</span><h2>Do que você precisa ao trabalho bem feito.</h2><p>Uma experiência pensada para tornar cada etapa mais leve e clara.</p><button class="button button-primary" data-demo-action="Encontrar um profissional">Encontrar um profissional <span aria-hidden="true">→</span></button></div>
+        <div class="steps">
+          <article class="step-card"><span class="step-number">01</span><span class="step-icon step-orange">⌕</span><h3>Conte o que precisa</h3><p>Encontre serviços e profissionais que combinam com seu projeto.</p></article>
+          <article class="step-card"><span class="step-number">02</span><span class="step-icon step-pink">✉</span><h3>Converse e combine</h3><p>Troque detalhes, tire dúvidas e alinhe o melhor caminho.</p></article>
+          <article class="step-card"><span class="step-number">03</span><span class="step-icon step-yellow">✦</span><h3>Veja acontecer</h3><p>Acompanhe o serviço e celebre o resultado do trabalho.</p></article>
+        </div>
+      </section>
+
+      <section class="pro-cta section-wrap">
+        <div class="cta-decoration" aria-hidden="true">✦</div>
+        <div><span class="eyebrow">PARA QUEM FAZ ACONTECER</span><h2>Seu talento merece ser encontrado.</h2><p>Imagine um espaço para mostrar seu trabalho e encontrar novas oportunidades.</p></div>
+        <button class="button button-dark" data-demo-action="Conhecer a área profissional">Conhecer a área profissional <span aria-hidden="true">→</span></button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main section-wrap">
+        <div class="footer-brand"><a class="brand" href="#inicio"><img src="public/brand/estrela-mark.svg" alt="" width="36" height="36" /><span>ESTRELA</span></a><p>Boas conexões fazem um bom trabalho brilhar.</p><span class="footer-demo">Protótipo visual · sem serviços conectados</span></div>
+        <div class="footer-links"><div><b>Explore</b><a href="#categorias">Serviços</a><a href="#profissionais">Profissionais</a><a href="#como-funciona">Como funciona</a></div><div><b>Sobre</b><button data-demo-action="Sobre a ESTRELA">Sobre a ESTRELA</button><button data-demo-action="Ajuda">Ajuda</button><button data-demo-action="Termos e privacidade">Termos e privacidade</button></div></div>
+      </div>
+      <div class="footer-bottom section-wrap"><span>© 2026 ESTRELA · conceito de marketplace</span><span>Feito para aproximar pessoas e boas ideias <b>✦</b></span></div>
+    </footer>
+
+    <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="dialog-name">
+      <button class="dialog-close" id="dialog-close" aria-label="Fechar perfil">×</button>
+      <div class="dialog-demo">DEMO — perfil e informações fictícios</div>
+      <div class="dialog-profile-head"><div class="dialog-avatar" id="dialog-avatar">MC</div><div><span class="verified-mark">✓</span><h2 id="dialog-name">Profissional</h2><p id="dialog-role"></p><p id="dialog-location"></p></div></div>
+      <p class="dialog-description" id="dialog-description"></p>
+      <div class="dialog-detail-row"><span>★ <b id="dialog-rating">4,9</b> <small>(avaliações fictícias)</small></span><strong id="dialog-price"></strong></div>
+      <div class="dialog-note">Este é um exemplo de interface. Mensagens, orçamento e contratação não estão conectados.</div>
+      <button class="button button-primary dialog-action" data-demo-action="Solicitar orçamento">Solicitar orçamento <span aria-hidden="true">→</span></button>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
